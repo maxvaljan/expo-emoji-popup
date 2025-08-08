@@ -1,0 +1,14 @@
+{
+  "name": "react-native-emoji-popup",
+  "version": "0.0.0",
+  "platforms": ["ios", "android"],
+  "ios": {
+    "modules": ["ExpoEmojiPopupModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.emojipopup.EmojiPopupExpoModule"]
+  }
+}
+
+
+
