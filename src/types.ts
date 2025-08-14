@@ -24,4 +24,11 @@ export interface EmojiPopupProps {
    * @platform android
    */
   contentContainerStyle?: StyleProp<ViewStyle>;
+
+  /*
+   * Style for the trigger container wrapping the children.
+   * @platform ios
+   * @platform android
+   */
+  style?: StyleProp<ViewStyle>;
 }

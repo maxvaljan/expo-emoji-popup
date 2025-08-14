@@ -1,5 +1,5 @@
 {
-  "name": "expo-emoji-popup",
+  "name": "react-native-emoji-popup",
   "version": "0.3.2",
   "description": "Emoji Popup for React Native",
   "source": "./src/index.tsx",
@@ -55,14 +55,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxvaljan/expo-emoji-popup.git"
+    "url": "git+https://github.com/okwasniewski/react-native-emoji-popup.git"
   },
   "author": "Oskar Kwaśniewski <oskarkwasniewski@icloud.com> (https://github.com/okwasniewski)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maxvaljan/expo-emoji-popup/issues"
+    "url": "https://github.com/okwasniewski/react-native-emoji-popup/issues"
   },
-  "homepage": "https://github.com/maxvaljan/expo-emoji-popup#readme",
+  "homepage": "https://github.com/okwasniewski/react-native-emoji-popup#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
