@@ -10,18 +10,35 @@ import React
 public class EmojiPopupViewImpl: UIView, MCEmojiPickerDelegate {
   private var delegate: EmojiPopupDelegate?
   @objc var onEmojiSelected: RCTDirectEventBlock?
+  private var didSetupGesture = false
   
-  public override func layoutSubviews() {
+  public override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupGestureIfNeeded()
+  }
+  
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    setupGestureIfNeeded()
+  }
+  
+  private func setupGestureIfNeeded() {
+    guard !didSetupGesture else { return }
     let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-    self.addGestureRecognizer(tapGesture)
+    addGestureRecognizer(tapGesture)
+    didSetupGesture = true
   }
   
   @objc func handleTap(_ gesture: UITapGestureRecognizer) {
     presentEmojiPicker()
   }
   
-  @objc public convenience init(delegate: EmojiPopupDelegate) {
+  @objc public convenience init(delegate: EmojiPopupDelegate?) {
     self.init()
+    self.delegate = delegate
+  }
+  
+  @objc public func setDelegate(_ delegate: EmojiPopupDelegate?) {
     self.delegate = delegate
   }
   

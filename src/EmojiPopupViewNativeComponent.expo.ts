@@ -5,8 +5,8 @@ type NativeProps = {
 } & Record<string, unknown>;
 
 // Expo Dev Client/EAS Build: resolve native view manager from Expo Modules
-const NativeView = requireNativeViewManager('ExpoEmojiPopup') as unknown as (props: NativeProps) => any;
+const NativeView = requireNativeViewManager('ExpoEmojiPopup') as unknown as (
+  props: NativeProps
+) => any;
 
 export default NativeView;
-
-

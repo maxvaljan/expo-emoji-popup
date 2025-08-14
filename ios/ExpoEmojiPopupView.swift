@@ -15,12 +15,8 @@ class ExpoEmojiPopupView: ExpoView, EmojiPopupDelegate {
     clipsToBounds = true
 
     // Set delegate after super.init
-    innerView.perform(Selector(("setDelegate:")), with: self)
+    innerView.setDelegate(self)
     addSubview(innerView)
-
-    // Add a tap to present the picker (mirrors RN manager behavior)
-    let tap = UITapGestureRecognizer(target: innerView, action: #selector(EmojiPopupViewImpl.handleTap(_:)))
-    innerView.addGestureRecognizer(tap)
   }
 
   override func layoutSubviews() {

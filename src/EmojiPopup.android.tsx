@@ -15,6 +15,7 @@ const EmojiModal = ({
   onEmojiSelected,
   closeButton,
   contentContainerStyle,
+  style,
 }: EmojiPopupProps) => {
   const [modalVisible, setModalVisible] = useState(false);
   const colorScheme = useColorScheme();
@@ -25,7 +26,9 @@ const EmojiModal = ({
 
   return (
     <>
-      <Pressable onPress={() => setModalVisible(true)}>{children}</Pressable>
+      <Pressable onPress={() => setModalVisible(true)} style={style}>
+        {children}
+      </Pressable>
 
       <Modal
         animationType="slide"
